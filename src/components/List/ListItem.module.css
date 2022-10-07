@@ -1,0 +1,8 @@
+.listitem{
+    border: .5px solid black;
+    width: 85%;
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+}

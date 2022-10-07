@@ -13,23 +13,24 @@ const Form = props => {
                 ...s, [name]: value,
             }
         ))
-        console.log(input)
     }
 
 
     const onSubmit = e => {
         e.preventDefault()
+        props.onFormSubmit({...input})
+        setInput({ name: '', age: '' })
     }
 
     return (
         <form className={styles.form}>
             <div className={styles.formControl}>
                 <label>Username</label>
-                <input type="text" placeholder="Name..." name='name' onChange={onChangeInput} />
+                <input type="text" value={input.name} placeholder="Name..." name='name' onChange={onChangeInput} />
             </div>
             <div className={styles.formControl}>
                 <label>Age (Years)</label>
-                <input type="text" placeholder="Age..." name='age' onChange={onChangeInput} />
+                <input type="text" value={input.age} placeholder="Age..." name='age' onChange={onChangeInput} />
             </div>
             <div className={styles.formControl}>
                 <button type='submit' onClick={onSubmit}>Add User</button>
