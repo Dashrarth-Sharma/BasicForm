@@ -1,0 +1,40 @@
+.form {
+    background: white;
+    color: black;
+    width: 600px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px 0;
+}
+
+.form .formControl {
+    width: 90%;
+    margin: 10px 0;
+}
+
+.form label {
+    /* text-align: left; */
+    font-size: 20px;
+}
+
+.form input {
+    border-radius: 10px;
+    border: .1px solid grey;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.form label,
+.form input {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.form .formControl button {
+    background: lightskyblue;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 35px;
+}
