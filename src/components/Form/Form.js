@@ -17,13 +17,43 @@ const Form = props => {
 
     const validation = val => {
 
-    }
+        const modalMSG = { isWrong: false, msg: "" }
 
+        if (val.name.trim().length === 0 && val.age.trim().length === 0) {
+
+            modalMSG.isWrong = true
+            modalMSG.msg = "All fields are important"
+
+        }else if (val.name.trim().length === 0) {
+
+            modalMSG.isWrong = true
+            modalMSG.msg = "Enter your Name!"
+
+        } else if (val.age.trim().length === 0) {
+
+            modalMSG.isWrong = true
+            modalMSG.msg = "Enter your Age!"
+
+        } else if (Number(val.age) <= 17) {
+
+            modalMSG.isWrong = true
+            modalMSG.msg = "Age Must be >= 18"
+
+        }
+
+        return modalMSG
+    }
 
     const onSubmit = e => {
         e.preventDefault()
-        validation(input.name)
-        props.onFormSubmit({...input})
+        const modalMSG = validation(input)
+
+        if(modalMSG.isWrong === true){
+            props.onFormError(modalMSG)
+            return;
+        }
+
+        props.onFormSubmit({ ...input })
         setInput({ name: '', age: '' })
     }
 

@@ -1,8 +1,10 @@
 .listitem{
-    border: .5px solid rgb(85, 163, 212);
+    /* border: .5px solid #333; */
     width: 85%;
     font-size: 18px;
     padding: 10px 10px;
     margin: 5px 0;
     border-radius: 8px;
+    color: #fff;
+    background-color: rgb(85, 163, 212);
 }

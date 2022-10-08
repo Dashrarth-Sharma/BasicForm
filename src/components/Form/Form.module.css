@@ -35,10 +35,12 @@
 .form .formControl button {
     background: lightskyblue;
     border: none;
+    outline: none;
     border-radius: 10px;
     padding: 15px 35px;
     transition: .5s;
     cursor: pointer;
+    color: #fff;
 }
 
 .form .formControl button:hover{
