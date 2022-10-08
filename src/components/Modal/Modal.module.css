@@ -1,0 +1,44 @@
+.modal{
+    background: rgb(255, 255, 255);
+    width: 600px;
+    min-height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modalHead{
+    /* color:black; */
+    background: lightskyblue;
+    padding: 15px 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.msg{
+    color:black;
+    padding: 0px 20px;
+    height: 80px;
+    /* background-color: lightgreen; */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+padding: 0px 25px 25px 0px;
+display: flex;
+justify-content: end;
+}
+
+.btn button{
+    background: lightskyblue;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 35px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btn button:hover{
+    background: rgb(85, 163, 212);
+}

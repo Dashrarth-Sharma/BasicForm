@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Form from './components/Form/Form';
 import List from './components/List/List';
+// import Modal from './components/Modal/Modal';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <Form onFormSubmit={getFormData} />
       <List data={formData} />
+      {/* <Modal /> */}
     </div>
   );
 }

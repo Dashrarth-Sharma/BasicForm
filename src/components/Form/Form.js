@@ -15,9 +15,14 @@ const Form = props => {
         ))
     }
 
+    const validation = val => {
+
+    }
+
 
     const onSubmit = e => {
         e.preventDefault()
+        validation(input.name)
         props.onFormSubmit({...input})
         setInput({ name: '', age: '' })
     }
